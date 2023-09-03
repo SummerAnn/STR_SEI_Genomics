@@ -6,6 +6,53 @@
 
 Welcome to our Genomics project repository! This project combines the power of machine learning with the SEI (Sequence-Extraction-Inference) framework to leverage genetic sequence information and short tandem repeat (STR) analysis for disease classification.
 
+Short tandem repeat (STR) analysis is a standard molecular biology method used to compare allele repeats at specific loci in DNA between two or more samples. A short tandem repeat is a microsatellite with repeat units that are 2 to 7 base pairs in length, with the number of repeats varying among individuals, making STRs effective for human identification purposes. This method differs from restriction fragment length polymorphism analysis (RFLP) since STR analysis does not cut the DNA with restriction enzymes. Instead, polymerase chain reaction (PCR) is employed to discover the lengths of the short tandem repeats based on the size of the PCR product.
+
+We are investigating STR using the Sei framework. Sei is a framework for predicting sequence regulatory activities and applying sequence information to human genetics data. Sei is the deep learning tool for the predictions for 21,907 chromatin profiles. 
+
+Sequence class label	Sequence class name	Rank by size	Group
+
+PC1	Polycomb / Heterochromatin	0	PC
+L1	Low signal	1	L
+TN1	Transcription	2	TN
+TN2	Transcription	3	TN
+L2	Low signal	4	L
+E1	Stem cell	5	E
+E2	Multi-tissue	6	E
+E3	Brain / Melanocyte	7	E
+L3	Low signal	8	L
+E4	Multi-tissue	9	E
+TF1	NANOG / FOXA1	10	TF
+HET1	Heterochromatin	11	HET
+E5	B-cell-like	12	E
+E6	Weak epithelial	13	E
+TF2	CEBPB	14	TF
+PC2	Weak Polycomb	15	PC
+E7	Monocyte / Macrophage	16	E
+E8	Weak multi-tissue	17	E
+L4	Low signal	18	L
+TF3	FOXA1 / AR / ESR1	19	TF
+PC3	Polycomb	20	PC
+TN3	Transcription	21	TN
+L5	Low signal	22	L
+HET2	Heterochromatin	23	HET
+L6	Low signal	24	L
+P	Promoter	25	P
+E9	Liver / Intestine	26	E
+CTCF	CTCF-Cohesin	27	CTCF
+TN4	Transcription	28	TN
+HET3	Heterochromatin	29	HET
+E10	Brain	30	E
+TF4	OTX2	31	TF
+HET4	Heterochromatin	32	HET
+L7	Low signal	33	L
+PC4	Polycomb / Bivalent stem cell Enh	34	PC
+HET5	Centromere	35	HET
+E11	T-cell	36	E
+TF5	AR	37	TF
+E12	Erythroblast-like	38	E
+HET6	Centromere	39	HET
+
 ## Table of Contents
 
 - [Introduction](#introduction)
