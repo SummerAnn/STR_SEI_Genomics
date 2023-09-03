@@ -64,5 +64,7 @@ Share the outcomes and insights gained from your project. Include performance me
 ## Contributors
 
 ## License
+Add license info here.
 
+## Thank you!
 Thank you for your interest in our Genomics project! If you have any questions or suggestions, please feel free to reach out to us. We look forward to advancing genomics research together with the power of machine learning and the SEI framework.
