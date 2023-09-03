@@ -2,7 +2,7 @@
 
 ## Genomics Project with Machine Learning and SEI Framework
 
-![Genomics Project](https://img.shields.io/badge/Genomics-Machine%20Learning-blue)
+![Genomics Project][https://facebook.com](https://img.shields.io/badge/Genomics-Machine%20Learning-blue)
 
 Welcome to our Genomics project repository! This project combines the power of machine learning with the SEI (Sequence-Extraction-Inference) framework to leverage genetic sequence information and short tandem repeat (STR) analysis for disease classification.
 
