@@ -1,5 +1,5 @@
+![brain_logo](https://github.com/SummerAnn/STR_SEI_Genomics/assets/107574104/9195cb58-bc84-4c9a-a06c-b0e26c086ca4)
 
-![Image from iOS](https://github.com/SummerAnn/STR_SEI_Genomics/assets/107574104/a8a2f4c7-0c83-4c37-8114-e3b2d951b70a)
 ## Genomics Project with Machine Learning and SEI Framework
 
 ![Genomics Project](https://img.shields.io/badge/Genomics%20Project-Machine%20Learning-brightgreen)
