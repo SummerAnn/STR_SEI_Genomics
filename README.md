@@ -1,4 +1,4 @@
-![brain_logo](https://github.com/SummerAnn/STR_SEI_Genomics/assets/107574104/9195cb58-bc84-4c9a-a06c-b0e26c086ca4)
+![brain_logo](https://github.com/SummerAnn/STR_SEI_Genomics/assets/107574104/870347b5-b00c-4927-be18-d1aa7a38c7b1)
 
 ## Genomics Project with Machine Learning and SEI Framework
 
