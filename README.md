@@ -213,24 +213,64 @@ python3.7 combine_outputs.py chr930/chr94colnoN_30.ref. 6
 
 ## Data
 
-Downstream and upstream analysis are essential steps in the process of using dimensionality reduction methods like PCA, t-SNE, UMAP, and clustering algorithms like K-Means and Louvain clustering for analyzing high-dimensional data, especially in the context of single-cell RNA sequencing (scRNA-seq) or other omics data. Let's break down what each of these terms means and how they fit into the analysis pipeline:
-1. **Upstream Analysis:**
-   -**Data Preprocessing:** Before applying dimensionality reduction methods, you need to preprocess your data. This includes steps like quality control, normalization, and feature selection. You want to ensure that your data is clean and that you focus on relevant features.
-  -**Feature Selection:** Often, not all features (genes, variables) are informative. Upstream analysis may involve selecting a subset of features that are most relevant to the biological question you're investigating. Dimensionality reduction techniques can help with this by identifying important features.
-  -**Data Scaling:** It's crucial to scale or transform your data properly before applying dimensionality reduction. For instance, for PCA, you typically center and scale your data to have zero mean and unit variance.
-3. **Dimensionality Reduction Methods:**
-  -**PCA (Principal Component Analysis):** PCA is used to reduce the dimensionality of data while preserving as much variance as possible. It identifies linear combinations of features (principal components) that capture the most significant variation in the data.
-  -**t-SNE (t-distributed Stochastic Neighbor Embedding):** t-SNE is a non-linear dimensionality reduction technique. It's excellent for visualizing high-dimensional data by minimizing the divergence between pairwise similarities in the high-dimensional and low-dimensional spaces.
-  -**UMAP (Uniform Manifold Approximation and Projection):** UMAP is another non-linear dimensionality reduction method. It focuses on preserving both local and global structure in the data, making it well-suited for clustering and visualization.
-4. **Downstream Analysis:**
-   -**Clustering (e.g., K-Means):** Once you have reduced the dimensionality of your data, you can perform clustering to identify groups of similar data points. K-Means is a common clustering algorithm that partitions data into 'K' clusters based on similarity.
- -**Community Detection (e.g., Louvain Clustering):** In biological data analysis, you might be interested in finding communities or modules of genes or cells that exhibit coordinated behavior. Louvain clustering is often used for this purpose in scRNA-seq analysis.
- -**Visualization:** After clustering or community detection, you can visualize your data in 2D or 3D space using t-SNE, UMAP, or other methods. Visualization helps you explore the structure of your data and can reveal meaningful patterns.
- -**Functional Enrichment Analysis:** Downstream analysis often includes functional enrichment analysis to understand the biological relevance of the identified clusters or communities. This involves looking for overrepresented biological functions, pathways, or gene ontologies within each cluster.
-  -**Statistical Testing:** You might perform statistical tests to assess the significance of differences between clusters or to identify marker genes that are highly expressed in specific clusters.
-   -**Interpretation:** Finally, the downstream analysis involves interpreting the results in the context of your biological question. It may lead to hypotheses, further experiments, or insights into the underlying biology.
+Introduction
+High-dimensional data, especially in fields like single-cell RNA sequencing (scRNA-seq), demands a systematic approach to uncover valuable insights. This tutorial guides you through the crucial steps of upstream and downstream analysis using dimensionality reduction techniques like PCA, t-SNE, UMAP, and clustering methods such as K-Means and Louvain clustering.
 
-In summary, upstream analysis prepares your data for dimensionality reduction, while downstream analysis involves extracting meaningful information from the reduced-dimensional data using clustering, visualization, functional analysis, and interpretation. These steps are crucial in uncovering insights from complex high-dimensional datasets.
+Upstream Analysis
+1. Data Preprocessing
+
+Ensure data quality through quality control.
+Normalize data to a common scale.
+Handle missing values and outliers.
+2. Feature Selection
+
+Identify relevant features (genes, variables).
+Remove noise and redundancy.
+3. Data Scaling
+
+Standardize data for algorithms like PCA.
+Center data to have zero mean and unit variance.
+Dimensionality Reduction Methods
+1. PCA (Principal Component Analysis)
+
+Reduce dimensionality while preserving variance.
+Identify principal components that explain data variation.
+2. t-SNE (t-distributed Stochastic Neighbor Embedding)
+
+Non-linear dimensionality reduction.
+Ideal for visualizing high-dimensional data.
+3. UMAP (Uniform Manifold Approximation and Projection)
+
+Non-linear method preserving local and global structure.
+Excellent for clustering and visualization.
+Downstream Analysis
+1. Clustering (e.g., K-Means)
+
+Group similar data points into clusters.
+Understand data structure.
+2. Community Detection (e.g., Louvain Clustering)
+
+Find modules or communities with coordinated behavior.
+Often used in biological data analysis.
+3. Visualization
+
+Visualize data in 2D or 3D space.
+Reveal meaningful patterns and clusters.
+4. Functional Enrichment Analysis
+
+Identify overrepresented biological functions or pathways.
+Understand the significance of clusters.
+5. Statistical Testing
+
+Assess differences between clusters.
+Identify marker genes.
+6. Interpretation
+
+Relate findings to your biological or research question.
+Formulate hypotheses and plan further experiments.
+
+Conclusion
+Mastering upstream and downstream analysis is key to unlocking insights from complex high-dimensional data. These steps help you preprocess data effectively, reduce dimensionality, and extract valuable information through clustering, visualization, and functional analysis. Now, dive into your data with confidence!
 
 ## Methodology
 Describe the SEI framework and the machine learning algorithms employed in this project. Include relevant links to external resources and libraries used.
