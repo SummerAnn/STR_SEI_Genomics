@@ -51,48 +51,52 @@ Predictive Modeling: ML models can predict the likelihood of certain alleles or 
 - **Scalability**: ML techniques are scalable, making it possible to analyze vast amounts of genomic data, which is increasingly common in modern genetics and genomics research.
 In summary, Machine Learning is valuable for STR analysis because it can automate, accelerate, and enhance the interpretation of STR data, enabling researchers and practitioners to extract meaningful insights, make accurate predictions, and better understand the genetic variations and implications of STRs in various fields of genetics and genomics.
 3. The SEI framework:
-   | ID  | Category                              | Code | Abbreviation |
-|---- |-------------------------------------- |----- |-------------- |
-| PC1 | Polycomb / Heterochromatin            | 0    | PC           |
-| L1  | Low signal                            | 1    | L            |
-| TN1 | Transcription                         | 2    | TN           |
-| TN2 | Transcription                         | 3    | TN           |
-| L2  | Low signal                            | 4    | L            |
-| E1  | Stem cell                             | 5    | E            |
-| E2  | Multi-tissue                          | 6    | E            |
-| E3  | Brain / Melanocyte                    | 7    | E            |
-| L3  | Low signal                            | 8    | L            |
-| E4  | Multi-tissue                          | 9    | E            |
-| TF1 | NANOG / FOXA1                         | 10   | TF           |
-| HET1| Heterochromatin                       | 11   | HET          |
-| E5  | B-cell-like                          | 12   | E            |
-| E6  | Weak epithelial                       | 13   | E            |
-| TF2 | CEBPB                                 | 14   | TF           |
-| PC2 | Weak Polycomb                         | 15   | PC           |
-| E7  | Monocyte / Macrophage                 | 16   | E            |
-| E8  | Weak multi-tissue                     | 17   | E            |
-| L4  | Low signal                            | 18   | L            |
-| TF3 | FOXA1 / AR / ESR1                     | 19   | TF           |
-| PC3 | Polycomb                             | 20   | PC           |
-| TN3 | Transcription                         | 21   | TN           |
-| L5  | Low signal                            | 22   | L            |
-| HET2| Heterochromatin                       | 23   | HET          |
-| L6  | Low signal                            | 24   | L            |
-| P   | Promoter                              | 25   | P            |
-| E9  | Liver / Intestine                     | 26   | E            |
-| CTCF| CTCF-Cohesin                         | 27   | CTCF         |
-| TN4 | Transcription                         | 28   | TN           |
-| HET3| Heterochromatin                       | 29   | HET          |
-| E10 | Brain                                | 30   | E            |
-| TF4 | OTX2                                 | 31   | TF           |
-| HET4| Heterochromatin                       | 32   | HET          |
-| L7  | Low signal                            | 33   | L            |
-| PC4 | Polycomb / Bivalent stem cell Enh     | 34   | PC           |
-| HET5| Centromere                            | 35   | HET          |
-| E11 | T-cell                               | 36   | E            |
-| TF5 | AR                                   | 37   | TF           |
-| E12 | Erythroblast-like                     | 38   | E            |
-| HET6| Centromere                            | 39   | HET          |
+ 
+- ******-
+
+  | ID   | Category                               | Code | Abbreviation |
+|------|---------------------------------------|------|--------------|
+| PC1  | Polycomb / Heterochromatin             | 0    | PC           |
+| L1   | Low signal                             | 1    | L            |
+| TN1  | Transcription                          | 2    | TN           |
+| TN2  | Transcription                          | 3    | TN           |
+| L2   | Low signal                             | 4    | L            |
+| E1   | Stem cell                              | 5    | E            |
+| E2   | Multi-tissue                           | 6    | E            |
+| E3   | Brain / Melanocyte                     | 7    | E            |
+| L3   | Low signal                             | 8    | L            |
+| E4   | Multi-tissue                           | 9    | E            |
+| TF1  | NANOG / FOXA1                          | 10   | TF           |
+| HET1 | Heterochromatin                        | 11   | HET          |
+| E5   | B-cell-like                           | 12   | E            |
+| E6   | Weak epithelial                        | 13   | E            |
+| TF2  | CEBPB                                  | 14   | TF           |
+| PC2  | Weak Polycomb                          | 15   | PC           |
+| E7   | Monocyte / Macrophage                  | 16   | E            |
+| E8   | Weak multi-tissue                      | 17   | E            |
+| L4   | Low signal                             | 18   | L            |
+| TF3  | FOXA1 / AR / ESR1                      | 19   | TF           |
+| PC3  | Polycomb                              | 20   | PC           |
+| TN3  | Transcription                          | 21   | TN           |
+| L5   | Low signal                             | 22   | L            |
+| HET2 | Heterochromatin                        | 23   | HET          |
+| L6   | Low signal                             | 24   | L            |
+| P    | Promoter                               | 25   | P            |
+| E9   | Liver / Intestine                      | 26   | E            |
+| CTCF | CTCF-Cohesin                          | 27   | CTCF         |
+| TN4  | Transcription                          | 28   | TN           |
+| HET3 | Heterochromatin                        | 29   | HET          |
+| E10  | Brain                                 | 30   | E            |
+| TF4  | OTX2                                  | 31   | TF           |
+| HET4 | Heterochromatin                        | 32   | HET          |
+| L7   | Low signal                             | 33   | L            |
+| PC4  | Polycomb / Bivalent stem cell Enh      | 34   | PC           |
+| HET5 | Centromere                             | 35   | HET          |
+| E11  | T-cell                                | 36   | E            |
+| TF5  | AR                                    | 37   | TF           |
+| E12  | Erythroblast-like                      | 38   | E            |
+| HET6 | Centromere                             | 39   | HET          |
+
 
      - ** Sei**  is a framework for systematically predicting sequence regulatory activities and applying sequence information to human genetics data. Sei provides a global map from any sequence to regulatory activities, as represented by 40 sequence classes, and each sequence class integrates predictions for 21,907 chromatin profiles (transcription factor, histone marks, and chromatin accessibility profiles across a wide range of cell types).
 5. Bioinformatics is a multidisciplinary field that combines biology, computer science, mathematics, and statistics to analyze and interpret biological data, particularly at the molecular level. Tools like bedtools and Python play a crucial role in bioinformatics for data manipulation, analysis, and visualization. Here's how they are used in the field:
