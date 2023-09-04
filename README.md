@@ -71,18 +71,14 @@ HET6	Centromere	39	HET
 ## Introduction
 
 Genomics is at the forefront of modern medicine, and leveraging machine learning techniques can significantly enhance our ability to understand and classify diseases based on genetic data. In this project, we employ the SEI framework to process genetic sequence information and short tandem repeats, ultimately building a robust disease classification model.
-
 1. Short Tandem Repeats (STRs): Short Tandem Repeats (STRs), also known as microsatellites or simple sequence repeats, are short sequences of DNA that consist of repeating units of 2 to 6 base pairs. These sequences are found throughout the human genome and in the genomes of many other organisms. 
-
 The term "tandem repeat" refers to the fact that the repeated sequences are located adjacent to each other, like beads on a string. For example, a common STR might have the sequence "ACACACACACAC."
 Key points about STRs:
 **Variable Length**: The number of repeats in an STR can vary among individuals. This variation is what makes STRs valuable for genetic profiling and forensic analysis.
 **Genetic Markers**: STRs are used as genetic markers because they are highly polymorphic, meaning they vary significantly from person to person. This makes them useful for tasks like DNA fingerprinting.
 **Mutation Prone**: STRs are prone to mutation, which can lead to changes in the number of repeats over generations. This makes them useful for studying evolution and population genetics.
 **Applications**: STR analysis is widely used in fields like forensic science, paternity testing, and population genetics. They are also used in research to map genes associated with various genetic disorders.
-
 In summary, STRs are short sequences of DNA with repeating units that are highly variable among individuals, making them important tools in genetics, forensics, and population studies.
-
 2. Why Machine Learning is valuable for analyzing STRs:
 **Pattern Recognition**: ML algorithms excel at recognizing patterns in data. In the context of STR analysis, ML can automatically identify and classify the repetitive patterns of DNA sequences, which can be challenging and time-consuming for humans to do manually.
 **Classification**: ML can classify STR sequences into different categories or allele lengths. This is crucial in applications like forensic genetics and genetic disease diagnosis, where distinguishing between different allele lengths is essential.
@@ -94,7 +90,6 @@ Predictive Modeling: ML models can predict the likelihood of certain alleles or 
 **Automation and Speed**: ML can automate the analysis of large-scale STR datasets, significantly speeding up the process and reducing the risk of human error.
 **Scalability**: ML techniques are scalable, making it possible to analyze vast amounts of genomic data, which is increasingly common in modern genetics and genomics research.
 In summary, Machine Learning is valuable for STR analysis because it can automate, accelerate, and enhance the interpretation of STR data, enabling researchers and practitioners to extract meaningful insights, make accurate predictions, and better understand the genetic variations and implications of STRs in various fields of genetics and genomics.
-
 3. Introduce the SEI framework and its relevance to bioinformatics projects.
 4. Provide an overview of the tools and technologies you'll be using, such as Python, bedtools, and downstream/upstream analysis.
 
