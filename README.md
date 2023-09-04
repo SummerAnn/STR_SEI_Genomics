@@ -6,7 +6,6 @@
 
 Welcome to our Genomics project repository! This project combines the power of machine learning with the SEI (Sequence-Extraction-Inference) framework to leverage genetic sequence information and short tandem repeat (STR) analysis for disease classification.
 
-Short tandem repeat (STR) analysis is a standard molecular biology method used to compare allele repeats at specific loci in DNA between two or more samples. A short tandem repeat is a microsatellite with repeat units that are 2 to 7 base pairs in length, with the number of repeats varying among individuals, making STRs effective for human identification purposes. This method differs from restriction fragment length polymorphism analysis (RFLP) since STR analysis does not cut the DNA with restriction enzymes. Instead, polymerase chain reaction (PCR) is employed to discover the lengths of the short tandem repeats based on the size of the PCR product.
 
 We are investigating STR using the Sei framework. Sei is a framework for predicting sequence regulatory activities and applying sequence information to human genetics data. Sei is the deep learning tool for the predictions for 21,907 chromatin profiles. 
 
@@ -90,9 +89,21 @@ Predictive Modeling: ML models can predict the likelihood of certain alleles or 
 **Automation and Speed**: ML can automate the analysis of large-scale STR datasets, significantly speeding up the process and reducing the risk of human error.
 **Scalability**: ML techniques are scalable, making it possible to analyze vast amounts of genomic data, which is increasingly common in modern genetics and genomics research.
 In summary, Machine Learning is valuable for STR analysis because it can automate, accelerate, and enhance the interpretation of STR data, enabling researchers and practitioners to extract meaningful insights, make accurate predictions, and better understand the genetic variations and implications of STRs in various fields of genetics and genomics.
-3. Introduce the SEI framework and its relevance to bioinformatics projects.
-4. Provide an overview of the tools and technologies you'll be using, such as Python, bedtools, and downstream/upstream analysis.
-
+3. The SEI framework:
+** Sei**  is a framework for systematically predicting sequence regulatory activities and applying sequence information to human genetics data. Sei provides a global map from any sequence to regulatory activities, as represented by 40 sequence classes, and each sequence class integrates predictions for 21,907 chromatin profiles (transcription factor, histone marks, and chromatin accessibility profiles across a wide range of cell types).
+5. Bioinformatics is a multidisciplinary field that combines biology, computer science, mathematics, and statistics to analyze and interpret biological data, particularly at the molecular level. Tools like bedtools and Python play a crucial role in bioinformatics for data manipulation, analysis, and visualization. Here's how they are used in the field:
+**Bedtools**:   
+   - **Data Manipulation**: Bedtools is a powerful suite of command-line tools for working with genomic intervals, such as regions on a genome. It allows bioinformaticians to perform operations like merging, intersecting, and subtracting genomic intervals. This is essential for tasks like identifying overlaps between genes and regulatory elements.
+   - **Genomic Annotations**: Bedtools can be used to annotate genomic intervals with additional information, such as gene names, functional annotations, or variant data. This is valuable for understanding the functional context of genomic regions.
+   - **Format Conversion**: It provides tools for converting data between different file formats commonly used in genomics, such as BED, GFF, VCF, and more. This flexibility simplifies data integration and compatibility.
+   - **Quality Control**: Bioinformaticians use bedtools for quality control tasks, including checking for data consistency, identifying duplicate entries, and filtering out low-quality or irrelevant data.
+**Python**:
+   - **Data Analysis and Manipulation**: Python is a popular programming language in bioinformatics due to its versatility and extensive libraries like NumPy, pandas, and BioPython. These libraries enable bioinformaticians to handle, manipulate, and analyze biological data efficiently.
+   - **Machine Learning**: Python is widely used for developing and implementing machine learning models for tasks such as DNA sequence classification, protein structure prediction, and disease prediction based on omics data.
+   - **Data Visualization**: Python offers libraries like Matplotlib, Seaborn, and Plotly for creating informative and visually appealing plots and graphs to visualize biological data, gene expression profiles, and more.
+   - **Integration with Bioinformatics Databases**: Python can be used to interact with bioinformatics databases and web services, making it easier to access and retrieve biological data for analysis.
+   - **Scripting and Workflow Automation**: Bioinformaticians often write Python scripts to automate repetitive tasks, create analysis pipelines, and facilitate reproducibility in research.
+   - **Community Support**: Python has a vibrant bioinformatics community, which means there are numerous resources, packages, and tutorials available for bioinformaticians to leverage in their work.
 
 
 ## Features
@@ -110,7 +121,11 @@ Follow these instructions to get the project up and running on your local machin
 
 - Python (>=3.6)
 - Pip (Python package manager)
-
+- Basic understanding of genetics and genomics
+-Installation of necessary software and libraries (e.g., bedtools, scikit-learn, pandas)-
+- Basic knowledge of the SEI framework
+- Sei requires Python 3.6+ and Python packages PyTorch (>=1.0), Selene (>=0.5.0), and docopt
+  
 ### Installation
 
 1. Clone this repository to your local machine.
@@ -118,7 +133,72 @@ Follow these instructions to get the project up and running on your local machin
 git clone https://github.com/yourusername/genomics-ml-sei.git
 ```
 ## Usage
-Describe how to use your project here. Include any necessary steps, commands, or examples for running the machine learning model and utilizing the SEI framework for disease classification.
+
+
+
+Pre-Sei:
+Bedtools- 
+   
+grep chrx simpleRepeat.bed > chrxsimple.bed
+grep chrx introns.bed > chrx.bed
+bedtools intersect -a chrxsimple.bed -b chrx.bed -wa > intersectx.bed
+wc -l intersectx.bed 
+seq n >temp.bed
+paste intersectx.bed temp.bed > intersectchrx.bed
+sort -k1,1 -k2,2n intersectchrx.bed > chrxsorted.bed
+bedtools merge -i chrxsorted.bed -c 1 -o count > chrxmerged.bed
+bedtools intersect -a intersectchrx.bed -b chrxmerged.bed -wb > chrxmergedIntersect.bed
+awk '{$4=$5=$6=""; print $0}' chrxmergedIntersect.bed > chrxflagmergeintersect.bed
+awk 'OFS=" " {print $1"\t", $2"\t", $3"\t", $4"\t",$5 }' chrxflagmergeintersect.bed > chrxflagmergeintersectTab.bed
+awk 'OFS=" " {print $1"\t", $2"\t", $3"\t", $4 }' chrxflank3000.bed > chrxflank3Columns.bed 
+bedtools flank -i chrxdropduplicate.bed -g /data/genomes/hg38/hg38.chrom.sizes -b 30000 > chrxflank3000.bed
+awk 'OFS=" " {print $1"\t", $2"\t", $3"\t", $4 }' chrxflank3000.bed > chrxflank3Columns.bed
+bedtools makewindows -b tabdelimchrxflank3col.bed -n 300 -i srcwinnum > 300winnumchrx.bed
+awk 'OFS=" " {print $1"\t", $3-1"\t", $3"\t", $4 }' 300winnumchrx.bed | tr -d " " > 300chrx4col.bed
+bedtools getfasta -fi /data/genomes/hg38/seq/hg38.fa -bed 300chrx4col.bed -name >  300basechrx4col.vcf
+grep -v '^>' 300basechr94col.vcf > baseOnlychr9_300.fa
+ pr -m -t -s 300chrx4col.bed baseOnlychr9_300.fa > chrx4colbas_300.vcf
+
+Sei-Prep:
+ Please download and extract the trained Sei model and resources (containing hg19 and hg38 FASTA files) .tar.gz files before proceeding:
+   sh ./download_data.sh
+   sh 1_sequence_prediction.sh <input-file> <genome> <output-dir> --cuda
+Arguments:
+<input-file>: BED or FASTA input file
+<genome>: If you use a BED file as input, this must be either hg19 or hg38 as these are the FASTA reference genome files we provide by default. If you are using a FASTA file, you can specify whichever genome version you are using for logging purposes.
+<output-dir>: Path to output directory (will be created if does not exist)
+--cuda: Optional, use this flag if running on a CUDA-enabled GPU.
+sh 1_variant_effect_prediction.sh <vcf> <hg> <output-dir> [--cuda]
+<vcf>: VCF file
+<hg>: Either hg19 or hg38
+<output-dir>: Path to output directory (will be created if does not exist)
+--cuda: Optional, use this flag if running on a CUDA-enabled GPU.
+
+Sei: 
+
+if [ "$cuda" = "--cuda" ]
+then
+    echo "use_cuda: True"
+    python3.7 vep_cli.py "$outdir/$vcf_basename" \
+                      $outdir \
+                      --genome=${hg_version} \
+                      --cuda
+else
+    echo "use_cuda: False"
+    python3.7 vep_cli.py "$outdir/$vcf_basename" \
+                      $outdir \
+                      --genome=${hg_version}
+fi
+date +"%r"
+#python3.7 sequence_class.py $outdir "$vcf_basename"
+#date +"%r"
+#split h5 files
+#commented out till we have our parameters (everything below this)
+python hdf5_manipulator/split_big.py --prefix /data/projects/nanopore/RepeatExpansion/TR_downstreamAnalysis/jupyterNotebook/plt/chr94colnoN_30.vcf --input /nfs/boylelab_turbo/anneun/TR_downstreamAnalysis/chr94colnoN_30_with_variant.vcf_predictions.h5 --size 360000
+for i in {0..5}; do mv ${outdir}/chromatin-profiles-hdf5/chr94colnoN_30.ref.predictions.hdf5.00${i} ${outdir}/chromatin-profiles-hdf5/chr94colnoN_30.ref.00${i}_predictions.hdf5; python3.7 ../sei-framework/2_raw_sc_score.py ${outdir}/chromatin-profiles-hdf5/chr94colnoN_30.ref.00${i}_predictions.hdf5 ../Sei/chr930-output; echo "part ${i} done!"; done
+#combine outputs
+python3.7 combine_outputs.py chr930/chr94colnoN_30.ref. 6
+#combine_outputs.py chrx/chrx4colnoN_3.ref. 6
 
 ## Data
 Explain the source and format of your genetic data. Provide details on where to access or obtain the data if applicable. You can also include a brief description of data preprocessing steps.
