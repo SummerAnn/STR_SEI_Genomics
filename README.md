@@ -12,16 +12,16 @@ We are investigating STR using the Sei framework. Sei is a framework for predict
 
 Sequence class label	Sequence class name	Rank by size	Group
 
-PC1	Polycomb / Heterochromatin	0	PC
-L1	Low signal	1	L
-TN1	Transcription	2	TN
-TN2	Transcription	3	TN
-L2	Low signal	4	L
-E1	Stem cell	5	E
-E2	Multi-tissue	6	E
-E3	Brain / Melanocyte	7	E
-L3	Low signal	8	L
-E4	Multi-tissue	9	E
+# PC1	Polycomb / Heterochromatin	0	PC
+# L1	Low signal	1	L
+# TN1	Transcription	2	TN
+# TN2	Transcription	3	TN
+# L2	Low signal	4	L
+# E1	Stem cell	5	E
+# E2	Multi-tissue	6	E
+# E3	Brain / Melanocyte	7	E
+# L3	Low signal	8	L
+# E4	Multi-tissue	9	E
 TF1	NANOG / FOXA1	10	TF
 HET1	Heterochromatin	11	HET
 E5	B-cell-like	12	E
