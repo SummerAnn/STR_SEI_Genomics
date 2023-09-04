@@ -244,10 +244,12 @@ Ideal for visualizing high-dimensional data.
 Non-linear method preserving local and global structure.
 Excellent for clustering and visualization.
 Downstream Analysis
+
 1. Clustering (e.g., K-Means)
 
 Group similar data points into clusters.
 Understand data structure.
+
 2. Community Detection (e.g., Louvain Clustering)
 
 Find modules or communities with coordinated behavior.
@@ -256,20 +258,24 @@ Often used in biological data analysis.
 
 Visualize data in 2D or 3D space.
 Reveal meaningful patterns and clusters.
+
 4. Functional Enrichment Analysis
 
 Identify overrepresented biological functions or pathways.
 Understand the significance of clusters.
+
 5. Statistical Testing
 
 Assess differences between clusters.
 Identify marker genes.
+
 6. Interpretation
 
 Relate findings to your biological or research question.
 Formulate hypotheses and plan further experiments.
 
-Conclusion
+Conclusion: 
+
 Mastering upstream and downstream analysis is key to unlocking insights from complex high-dimensional data. These steps help you preprocess data effectively, reduce dimensionality, and extract valuable information through clustering, visualization, and functional analysis. Now, dive into your data with confidence!
 
 ## Methodology
