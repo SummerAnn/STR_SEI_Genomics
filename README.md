@@ -11,46 +11,7 @@ We are investigating STR using the Sei framework. Sei is a framework for predict
 
 Sequence class label	Sequence class name	Rank by size	Group
 
-PC1	Polycomb / Heterochromatin	0	PC
-L1	Low signal	1	L
-TN1	Transcription	2	TN
-TN2	Transcription	3	TN
-L2	Low signal	4	L
-E1	Stem cell	5	E
-E2	Multi-tissue	6	E
-E3	Brain / Melanocyte	7	E
-L3	Low signal	8	L
-E4	Multi-tissue	9	E
-TF1	NANOG / FOXA1	10	TF
-HET1	Heterochromatin	11	HET
-E5	B-cell-like	12	E
-E6	Weak epithelial	13	E
-TF2	CEBPB	14	TF
-PC2	Weak Polycomb	15	PC
-E7	Monocyte / Macrophage	16	E
-E8	Weak multi-tissue	17	E
-L4	Low signal	18	L
-TF3	FOXA1 / AR / ESR1	19	TF
-PC3	Polycomb	20	PC
-TN3	Transcription	21	TN
-L5	Low signal	22	L
-HET2	Heterochromatin	23	HET
-L6	Low signal	24	L
-P	Promoter	25	P
-E9	Liver / Intestine	26	E
-CTCF	CTCF-Cohesin	27	CTCF
-TN4	Transcription	28	TN
-HET3	Heterochromatin	29	HET
-E10	Brain	30	E
-TF4	OTX2	31	TF
-HET4	Heterochromatin	32	HET
-L7	Low signal	33	L
-PC4	Polycomb / Bivalent stem cell Enh	34	PC
-HET5	Centromere	35	HET
-E11	T-cell	36	E
-TF5	AR	37	TF
-E12	Erythroblast-like	38	E
-HET6	Centromere	39	HET
+
 
 ## Table of Contents
 
@@ -73,24 +34,67 @@ Genomics is at the forefront of modern medicine, and leveraging machine learning
 1. Short Tandem Repeats (STRs): Short Tandem Repeats (STRs), also known as microsatellites or simple sequence repeats, are short sequences of DNA that consist of repeating units of 2 to 6 base pairs. These sequences are found throughout the human genome and in the genomes of many other organisms. 
 The term "tandem repeat" refers to the fact that the repeated sequences are located adjacent to each other, like beads on a string. For example, a common STR might have the sequence "ACACACACACAC."
 Key points about STRs:
-**Variable Length**: The number of repeats in an STR can vary among individuals. This variation is what makes STRs valuable for genetic profiling and forensic analysis.
-**Genetic Markers**: STRs are used as genetic markers because they are highly polymorphic, meaning they vary significantly from person to person. This makes them useful for tasks like DNA fingerprinting.
-**Mutation Prone**: STRs are prone to mutation, which can lead to changes in the number of repeats over generations. This makes them useful for studying evolution and population genetics.
-**Applications**: STR analysis is widely used in fields like forensic science, paternity testing, and population genetics. They are also used in research to map genes associated with various genetic disorders.
+- **Variable Length**: The number of repeats in an STR can vary among individuals. This variation is what makes STRs valuable for genetic profiling and forensic analysis.
+- **Genetic Markers**: STRs are used as genetic markers because they are highly polymorphic, meaning they vary significantly from person to person. This makes them useful for tasks like DNA fingerprinting.
+- **Mutation Prone**: STRs are prone to mutation, which can lead to changes in the number of repeats over generations. This makes them useful for studying evolution and population genetics.
+- **Applications**: STR analysis is widely used in fields like forensic science, paternity testing, and population genetics. They are also used in research to map genes associated with various genetic disorders.
 In summary, STRs are short sequences of DNA with repeating units that are highly variable among individuals, making them important tools in genetics, forensics, and population studies.
 2. Why Machine Learning is valuable for analyzing STRs:
-**Pattern Recognition**: ML algorithms excel at recognizing patterns in data. In the context of STR analysis, ML can automatically identify and classify the repetitive patterns of DNA sequences, which can be challenging and time-consuming for humans to do manually.
-**Classification**: ML can classify STR sequences into different categories or allele lengths. This is crucial in applications like forensic genetics and genetic disease diagnosis, where distinguishing between different allele lengths is essential.
+- **Pattern Recognition**: ML algorithms excel at recognizing patterns in data. In the context of STR analysis, ML can automatically identify and classify the repetitive patterns of DNA sequences, which can be challenging and time-consuming for humans to do manually.
+- **Classification**: ML can classify STR sequences into different categories or allele lengths. This is crucial in applications like forensic genetics and genetic disease diagnosis, where distinguishing between different allele lengths is essential.
 Predictive Modeling: ML models can predict the likelihood of certain alleles or patterns of STRs occurring in an individual's genome based on training data. This predictive capability is useful for genetic profiling and assessing genetic risk factors for diseases.
-**Population Genetics**: ML can help analyze large datasets of STR profiles from diverse populations. It can uncover population-specific patterns and genetic variations, aiding in understanding human migration, genetic diversity, and population history.
-**Mutation Prediction**: ML algorithms can be trained to predict the likelihood of STR mutations. This is valuable in studying the evolution of STRs over generations and their role in genetic diseases caused by repeat expansions or contractions.
-**Feature Extraction**: ML techniques can automatically extract relevant features or characteristics from STR data, which can be used as input for downstream analyses or for training more complex models.
-**Data Integration**: In bioinformatics, ML can be used to integrate STR data with other omics data (e.g., genomics, transcriptomics, proteomics) to gain a comprehensive understanding of how STR variations relate to gene expression, protein function, and disease mechanisms.
-**Automation and Speed**: ML can automate the analysis of large-scale STR datasets, significantly speeding up the process and reducing the risk of human error.
-**Scalability**: ML techniques are scalable, making it possible to analyze vast amounts of genomic data, which is increasingly common in modern genetics and genomics research.
+- **Population Genetics**: ML can help analyze large datasets of STR profiles from diverse populations. It can uncover population-specific patterns and genetic variations, aiding in understanding human migration, genetic diversity, and population history.
+- **Mutation Prediction**: ML algorithms can be trained to predict the likelihood of STR mutations. This is valuable in studying the evolution of STRs over generations and their role in genetic diseases caused by repeat expansions or contractions.
+- **Feature Extraction**: ML techniques can automatically extract relevant features or characteristics from STR data, which can be used as input for downstream analyses or for training more complex models.
+- **Data Integration**: In bioinformatics, ML can be used to integrate STR data with other omics data (e.g., genomics, transcriptomics, proteomics) to gain a comprehensive understanding of how STR variations relate to gene expression, protein function, and disease mechanisms.
+- **Automation and Speed**: ML can automate the analysis of large-scale STR datasets, significantly speeding up the process and reducing the risk of human error.
+- **Scalability**: ML techniques are scalable, making it possible to analyze vast amounts of genomic data, which is increasingly common in modern genetics and genomics research.
 In summary, Machine Learning is valuable for STR analysis because it can automate, accelerate, and enhance the interpretation of STR data, enabling researchers and practitioners to extract meaningful insights, make accurate predictions, and better understand the genetic variations and implications of STRs in various fields of genetics and genomics.
 3. The SEI framework:
-** Sei**  is a framework for systematically predicting sequence regulatory activities and applying sequence information to human genetics data. Sei provides a global map from any sequence to regulatory activities, as represented by 40 sequence classes, and each sequence class integrates predictions for 21,907 chromatin profiles (transcription factor, histone marks, and chromatin accessibility profiles across a wide range of cell types).
+   | ID  | Category                              | Code | Abbreviation |
+|---- |-------------------------------------- |----- |-------------- |
+| PC1 | Polycomb / Heterochromatin            | 0    | PC           |
+| L1  | Low signal                            | 1    | L            |
+| TN1 | Transcription                         | 2    | TN           |
+| TN2 | Transcription                         | 3    | TN           |
+| L2  | Low signal                            | 4    | L            |
+| E1  | Stem cell                             | 5    | E            |
+| E2  | Multi-tissue                          | 6    | E            |
+| E3  | Brain / Melanocyte                    | 7    | E            |
+| L3  | Low signal                            | 8    | L            |
+| E4  | Multi-tissue                          | 9    | E            |
+| TF1 | NANOG / FOXA1                         | 10   | TF           |
+| HET1| Heterochromatin                       | 11   | HET          |
+| E5  | B-cell-like                          | 12   | E            |
+| E6  | Weak epithelial                       | 13   | E            |
+| TF2 | CEBPB                                 | 14   | TF           |
+| PC2 | Weak Polycomb                         | 15   | PC           |
+| E7  | Monocyte / Macrophage                 | 16   | E            |
+| E8  | Weak multi-tissue                     | 17   | E            |
+| L4  | Low signal                            | 18   | L            |
+| TF3 | FOXA1 / AR / ESR1                     | 19   | TF           |
+| PC3 | Polycomb                             | 20   | PC           |
+| TN3 | Transcription                         | 21   | TN           |
+| L5  | Low signal                            | 22   | L            |
+| HET2| Heterochromatin                       | 23   | HET          |
+| L6  | Low signal                            | 24   | L            |
+| P   | Promoter                              | 25   | P            |
+| E9  | Liver / Intestine                     | 26   | E            |
+| CTCF| CTCF-Cohesin                         | 27   | CTCF         |
+| TN4 | Transcription                         | 28   | TN           |
+| HET3| Heterochromatin                       | 29   | HET          |
+| E10 | Brain                                | 30   | E            |
+| TF4 | OTX2                                 | 31   | TF           |
+| HET4| Heterochromatin                       | 32   | HET          |
+| L7  | Low signal                            | 33   | L            |
+| PC4 | Polycomb / Bivalent stem cell Enh     | 34   | PC           |
+| HET5| Centromere                            | 35   | HET          |
+| E11 | T-cell                               | 36   | E            |
+| TF5 | AR                                   | 37   | TF           |
+| E12 | Erythroblast-like                     | 38   | E            |
+| HET6| Centromere                            | 39   | HET          |
+
+     - ** Sei**  is a framework for systematically predicting sequence regulatory activities and applying sequence information to human genetics data. Sei provides a global map from any sequence to regulatory activities, as represented by 40 sequence classes, and each sequence class integrates predictions for 21,907 chromatin profiles (transcription factor, histone marks, and chromatin accessibility profiles across a wide range of cell types).
 5. Bioinformatics is a multidisciplinary field that combines biology, computer science, mathematics, and statistics to analyze and interpret biological data, particularly at the molecular level. Tools like bedtools and Python play a crucial role in bioinformatics for data manipulation, analysis, and visualization. Here's how they are used in the field:
 **Bedtools**:   
    - **Data Manipulation**: Bedtools is a powerful suite of command-line tools for working with genomic intervals, such as regions on a genome. It allows bioinformaticians to perform operations like merging, intersecting, and subtracting genomic intervals. This is essential for tasks like identifying overlaps between genes and regulatory elements.
