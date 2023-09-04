@@ -144,9 +144,10 @@ git clone https://github.com/yourusername/genomics-ml-sei.git
 
 
 
-Pre-Sei:
-Bedtools- 
-   
+-**Pre-Sei**:
+Bedtools
+
+```bash   
 grep chrx simpleRepeat.bed > chrxsimple.bed
 grep chrx introns.bed > chrx.bed
 bedtools intersect -a chrxsimple.bed -b chrx.bed -wa > intersectx.bed
@@ -166,24 +167,25 @@ awk 'OFS=" " {print $1"\t", $3-1"\t", $3"\t", $4 }' 300winnumchrx.bed | tr -d " 
 bedtools getfasta -fi /data/genomes/hg38/seq/hg38.fa -bed 300chrx4col.bed -name >  300basechrx4col.vcf
 grep -v '^>' 300basechr94col.vcf > baseOnlychr9_300.fa
  pr -m -t -s 300chrx4col.bed baseOnlychr9_300.fa > chrx4colbas_300.vcf
+```
 
-Sei-Prep:
+-**Sei-Prep**:
  Please download and extract the trained Sei model and resources (containing hg19 and hg38 FASTA files) .tar.gz files before proceeding:
-   sh ./download_data.sh
-   sh 1_sequence_prediction.sh <input-file> <genome> <output-dir> --cuda
+   ```bash sh ./download_data.sh ```
+   ```bash  sh 1_sequence_prediction.sh <input-file> <genome> <output-dir> --cuda ```
 Arguments:
 <input-file>: BED or FASTA input file
 <genome>: If you use a BED file as input, this must be either hg19 or hg38 as these are the FASTA reference genome files we provide by default. If you are using a FASTA file, you can specify whichever genome version you are using for logging purposes.
 <output-dir>: Path to output directory (will be created if does not exist)
 --cuda: Optional, use this flag if running on a CUDA-enabled GPU.
-sh 1_variant_effect_prediction.sh <vcf> <hg> <output-dir> [--cuda]
+  ```bash sh 1_variant_effect_prediction.sh <vcf> <hg> <output-dir> [--cuda] ```
 <vcf>: VCF file
 <hg>: Either hg19 or hg38
 <output-dir>: Path to output directory (will be created if does not exist)
 --cuda: Optional, use this flag if running on a CUDA-enabled GPU.
 
 Sei: 
-
+```bash 
 if [ "$cuda" = "--cuda" ]
 then
     echo "use_cuda: True"
@@ -207,6 +209,7 @@ for i in {0..5}; do mv ${outdir}/chromatin-profiles-hdf5/chr94colnoN_30.ref.pred
 #combine outputs
 python3.7 combine_outputs.py chr930/chr94colnoN_30.ref. 6
 #combine_outputs.py chrx/chrx4colnoN_3.ref. 6
+```
 
 ## Data
 Explain the source and format of your genetic data. Provide details on where to access or obtain the data if applicable. You can also include a brief description of data preprocessing steps.
