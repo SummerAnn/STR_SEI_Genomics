@@ -96,16 +96,23 @@ In summary, Machine Learning is valuable for STR analysis because it can automat
 | HET6 | Centromere                          | 39   | HET          |
 
 
+by  Kathy Chen (chen.kathleenm@gmail.com) Princeton University
 
 **Sei**  is a framework for systematically predicting sequence regulatory activities and applying sequence information to human genetics data. Sei provides a global map from any sequence to regulatory activities, as represented by 40 sequence classes, and each sequence class integrates predictions for 21,907 chromatin profiles (transcription factor, histone marks, and chromatin accessibility profiles across a wide range of cell types).
 
 5. Bioinformatics is a multidisciplinary field that combines biology, computer science, mathematics, and statistics to analyze and interpret biological data, particularly at the molecular level. Tools like bedtools and Python play a crucial role in bioinformatics for data manipulation, analysis, and visualization. Here's how they are used in the field:
+   
 **Bedtools**:   
+
    - **Data Manipulation**: Bedtools is a powerful suite of command-line tools for working with genomic intervals, such as regions on a genome. It allows bioinformaticians to perform operations like merging, intersecting, and subtracting genomic intervals. This is essential for tasks like identifying overlaps between genes and regulatory elements.
    - **Genomic Annotations**: Bedtools can be used to annotate genomic intervals with additional information, such as gene names, functional annotations, or variant data. This is valuable for understanding the functional context of genomic regions.
    - **Format Conversion**: It provides tools for converting data between different file formats commonly used in genomics, such as BED, GFF, VCF, and more. This flexibility simplifies data integration and compatibility.
    - **Quality Control**: Bioinformaticians use bedtools for quality control tasks, including checking for data consistency, identifying duplicate entries, and filtering out low-quality or irrelevant data.
+  
+     
 **Python**:
+
+
    - **Data Analysis and Manipulation**: Python is a popular programming language in bioinformatics due to its versatility and extensive libraries like NumPy, pandas, and BioPython. These libraries enable bioinformaticians to handle, manipulate, and analyze biological data efficiently.
    - **Machine Learning**: Python is widely used for developing and implementing machine learning models for tasks such as DNA sequence classification, protein structure prediction, and disease prediction based on omics data.
    - **Data Visualization**: Python offers libraries like Matplotlib, Seaborn, and Plotly for creating informative and visually appealing plots and graphs to visualize biological data, gene expression profiles, and more.
@@ -130,7 +137,7 @@ Follow these instructions to get the project up and running on your local machin
 - Python (>=3.6)
 - Pip (Python package manager)
 - Basic understanding of genetics and genomics
--Installation of necessary software and libraries (e.g., bedtools, scikit-learn, pandas)-
+- Installation of necessary software and libraries (e.g., bedtools, scikit-learn, pandas)
 - Basic knowledge of the SEI framework
 - Sei requires Python 3.6+ and Python packages PyTorch (>=1.0), Selene (>=0.5.0), and docopt
   
